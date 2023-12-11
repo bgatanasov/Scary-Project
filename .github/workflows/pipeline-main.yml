@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build on Main
 
 on:
   push:
@@ -10,8 +10,8 @@ jobs:
    deploy-frontend:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to production
+      - name: Deploy to Main
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.RENDER_FRONTEND_KEY }}
+          service-id: ${{ secrets.RENDER_Main_KEY }}
           api-key: ${{ secrets.RENDER_API_KEY }}
