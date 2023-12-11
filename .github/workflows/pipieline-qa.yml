@@ -1,17 +1,17 @@
-name: Build on Main
+name: Build on QA
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "qa" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "qa" ]
 
 jobs:
-   deploy-frontend:
+   deploy-qa:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Main
+      - name: Deploy to QA
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.RENDER_Main_KEY }}
+          service-id: ${{ secrets.RENDER_QA_KEY }}
           api-key: ${{ secrets.RENDER_API_KEY }}
