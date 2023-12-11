@@ -1,4 +1,4 @@
-name: Build on QA
+name: Build on QA render
 
 on:
   push:
