@@ -13,5 +13,5 @@ jobs:
       - name: Deploy to Main
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.RENDER_Main_KEY }}
+          service-id: ${{ secrets.RENDER_MAIN_KEY }}
           api-key: ${{ secrets.RENDER_API_KEY }}
